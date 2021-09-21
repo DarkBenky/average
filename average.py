@@ -1,8 +1,9 @@
-a = float(input())
-b = float(input())
-c = float(input())
-x = float
-x=a+b+c
-x=x/3
+a = int(input("amount of nums"))
+x = 0 
+for i in range (0,a):
+  num = int(input("number"))
+  x=x+num 
 
-print (x)
+x=x/a
+print(x)
+  
