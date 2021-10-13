@@ -1,6 +1,5 @@
 def sortingLOL(num):
-    size = len(num)
-    for i in range(size-1):
+    for i in range(len(num)-1,0,-1):
         for lol in range(i):
             if num[lol]>num[lol+1]:
                 temp = num[lol]
