@@ -1,8 +1,20 @@
-a = float(input())
-b = float(input())
-c = float(input())
-x = float
-x=a+b+c
-x=x/3
+def rozbit():
 
-print (x)
+    x = '10*5+8+20'
+    
+    nums = []
+    znaminka=[]
+    last_index=-1
+
+    for i , c in enumerate(x):
+        if c =='+' or c =='-':
+            nums.append(x[1+last_index:i])
+            znaminka.append(c)
+            last_index = i
+
+    nums.append(x[1+last_index:])
+    return nums,znaminka
+      
+print(rozbit())
+
+
