@@ -34,6 +34,8 @@ def zrataj(cisla,znaminka):
     print (cisla , znaminka)
     x = 0
     lol = 0
+    z2=0
+    res = []
     for i in znaminka:
         z=int(cisla[x])
         z1=int(cisla[x+1])
@@ -48,11 +50,9 @@ def zrataj(cisla,znaminka):
             del cisla[x]
             x = x+1;
             cisla.insert(x,z2)
-        res = []
-        # vysledky si insertujem do pola
-        res.insert(lol,z2)
-        lol = lol + 1
-        print (z2) 
+    print (z2)
+    
+
 
 
 
