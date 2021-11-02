@@ -32,25 +32,34 @@ def roz(x):
 
 def zrataj(cisla,znaminka):
     print (cisla , znaminka)
+    x = 0
+    lol = 0
     for i in znaminka:
-        x = 0
-        
         z=int(cisla[x])
         z1=int(cisla[x+1])
         q=znaminka[x]
         if q == '*':
             z2 = z  * z1
+            del cisla[x]
+            x = x+1;
+            cisla.insert(x,z2)
         if q == '/':
             z2 = z  / z1
-        print (z2)    
-        
+            del cisla[x]
+            x = x+1;
+            cisla.insert(x,z2)
+        res = []
+        # vysledky si insertujem do pola
+        res.insert(lol,z2)
+        lol = lol + 1
+        print (z2) 
+
+
+
+
 
 x , y = rozbit()
 print (x , y)
 for i in x:
     x1 , y1 = roz (i)
     zrataj (x1 , y1)
-
-
-
-
