@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let a;
+    let b;
+    let c;
+    let povrch;
+    let objem;
+
+    a=Numeric(prompt("dlzka"));
+    b=Numeric(prompt("sirka"));
+    c=Numeric(prompt("vyska"));
+
+    povrch = 2*a+b+2*a+c+2*b+c;
+
+    objem = a*b*c;
+
+    document.write(povrch+"je povrch"+"<br>"+obsah+"obsah je");
+
+    let x;
+    let x1;
+    let x2;
+    let x3;
+    let z;
+    let y;
+
+    z=Numeric(prompt("first num"));
+    y=Numeric(prompt("sec num"));
+    
+    x = z + y;
+    x1 = z - y;
+    x2 = z * y;
+    x3 = z / y;
+
+    document.write(x+"sucet"+"<br>");
+    document.write(x1+"rozdiel"+"<br>");
+    document.write(x2+"sucin"+"<br>");
+    document.write(x3+"podiel"+"<br>");
+    
+    let use;
+    let km;
+    let price;
+    let onel;
+    let used;
+    let fuel;
+
+    use=Numeric(prompt("l/100km"));
+    km=Numeric(prompt("distance in km"))
+    price=Numeric(prompt("price for 1l of fuel"))
+
+    onel = use / 100;
+    used = onel * km;
+    fuel = used * price;
+
+    document.write(use+"l/100km"+"<br>");
+    document.write(onel+"l/1km"+"<br>");
+    document.write(used+"ammount of used fuel"+"<br>");
+    document.write(fuel+"price for used traveled distance"+"<br>");
+
+    </script>
+    
+</body>
+</html>
