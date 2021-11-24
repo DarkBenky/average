@@ -36,24 +36,6 @@ for z in lines:
 print (vek)
 
 
-# for a in lines:
-#     a = a.rstrip() #  rozdeli na riatky stringov
-#     data = a.split(";") #  rozdeli na pole delen ;
-
-
-# for l , k in mesta:
-#     print(mesta[k])
-#     print(pocet[k])       
-      
-# for a in lines:
-#     a = a.rstrip() #  rozdeli na riatky stringov
-#     print(a)
-#     data = a.split(";") #  rozdeli na pole delen ;
-#     if data[2] == "Muž":
-#         m=m+1
-#     if data[2] == "Žena":
-#         z=z+1
-
 
 # for x,y in enumerate(lines):
 #     if x < 100:
