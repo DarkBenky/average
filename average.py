@@ -2,7 +2,7 @@ import time
 MAX_CACHE_SIZE = 3
 
 def put(cache, key, value):
-    # ak je v cache rovny max tak popne prvy ak nie prida do cache dalcie data
+    # ak je v cache rovny max tak popne prvy ak nie prida do cache dalsie data
     if len (cache) == MAX_CACHE_SIZE:
         cache.pop(next(iter(cache)))
     cache[key]=value
