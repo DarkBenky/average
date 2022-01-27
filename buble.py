@@ -1,11 +1,10 @@
-def sortingLOL(num):
-    for i in range(len(num)-1,0,-1):
-        for lol in range(i):
-            if num[lol]>num[lol+1]:
-                temp = num[lol]
-                num[lol]=num[lol+1]
-                num[lol+1]=temp
-num = [10,1,5,6,7,9]
-sortingLOL(num)
 
-print(num)
+arr = [0,564,56,78,5,69,56]
+
+for i in range(len(arr)):
+    for j in range(i):
+        if arr[j] > arr[j+1]:
+            temp = arr[j]
+            arr[j] = arr[j+1]
+            arr[j+1] = temp
+print (arr)
