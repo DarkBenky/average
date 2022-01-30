@@ -1,65 +1,44 @@
-f=open("susr-dataset-objednavky-pipes.csv",encoding="UTF-8")
-
-lines=f.readlines()
-price = 0
-num = 0
-firmy = {}
-for z in lines:
-    z = z.rstrip() #  rozdeli na riatky stringov
-    data = z.split("|") #  rozdeli na pole delen ;
-    price = price + float(data[9])
-    num = num +1
-price = price / num
-print ("primerne cena je",price)
-max = 0
-firma =""
-for z in lines:
-    z = z.rstrip() #  rozdeli na riatky stringov
-    data = z.split("|") #  rozdeli na pole delen ;
-    if float(data[9]) > max:
-        max = float(data[9])
-        firma =data[4]
-print ("maximalna cena za objednavku je",max ,"od firmy",firma)
-
-for a in lines:
-    a = a.rstrip() #  rozdeli na riatky stringov
-    data = a.split("|") #  rozdeli na pole delen ;
-    if data[4] in firmy:
-        firmy[data[4]] +=1
-    else:
-        firmy[data[4]]=1 
-      
-m = 0
-f = ""
-for k , v in firmy.items():
+def write():
+    f = open("data.txt","a")
     
-    if v > m:
-        m = v
-        f = k
-    else:
-        continue    
-print ("najviac objednavok ma",f,"a to",m)
-
-cena = 0
-
-m1 = 0
-f1 = 0
-
-for a in lines:
-    a = a.rstrip() #  rozdeli na riatky stringov
-    data = a.split("|") #  rozdeli na pole delen ;
-    if data[4] in firmy:
-        cena = float(data[9])
-        firmy[data[4]] +=cena
-    else:
-        firmy[data[4]] =cena        
-           
-for k , v in firmy.items():
+    date = input("date :")
+    todo = input("to do :")
     
-        if v > m1:
-            m1 = v
-            f1 = k
-        else:
-            continue
-print ("najvecie cenu objedanavok ma firma", f1 , "a to" , m1)        
+    todo = todo.replace(" " , "_")
+    f.write(date+"|")
+    f.write(todo)
+    f.write("\n")
+    
+
+
+def read():
+    
+    f = open("data.txt","r")
+    
+    for line in f:
+        data = line.split("|")
+
+
+
+def search():
+     
+    search = input("input searched date :")
+    
+    f = open("data.txt","r")
+    
+    for line in f:
+        data = line.split("|")
+        if data[0] == search:
+            print ("V tento den ste chceli urobi" , data[1])
+
+
+while True:
+    x = input("input if you want write (write) or search (search) or read (read) all thinks :")
+    
+    if x == "write":
+        write()
+    elif x == "search":
+        search()
+    elif x == "read":
+        read()    
             
