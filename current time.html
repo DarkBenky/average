@@ -8,23 +8,7 @@
 </head>
 <body>
     <script>
-    time = new Date().getHours()
-    min = new Date().getMinutes()  
-    
-    let minutes 
-    minutes = time * 60 + min
-    
-
-    if (minutes>4*60 && minutes < 8*60 ){
-        document.write("Dobre rano <br>"+ "cas je "+ time+ ":" + min)
-    }
-    if (minutes>4*60 && minutes < 18*60){
-        document.write("Dobry den <br>"+ "cas je "+ time+":"+ min)
-    }
-    if (minutes>18*60 && minutes <4*60){
-        document.write("Dobru noc <br>"+ "cas je "+ time+":" + min)
-    }
-    
+        document.write(prompt("krajske mesto").substring(4, 6) + prompt("rodne cislo").substring(0, 2) + prompt("vase meno").substring(0, 2) + prompt("Priezvisko").substring(0, 2) + prompt("Cislo mobilu").substring(8, 10))
     </script>
 </body>
 </html>
