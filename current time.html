@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    time = new Date().getHours()
+    min = new Date().getMinutes()  
+    
+    let minutes 
+    minutes = time * 60 + min
+    
+
+    if (minutes>4*60 && minutes < 8*60 ){
+        document.write("Dobre rano <br>"+ "cas je "+ time+ ":" + min)
+    }
+    if (minutes>4*60 && minutes < 18*60){
+        document.write("Dobry den <br>"+ "cas je "+ time+":"+ min)
+    }
+    if (minutes>18*60 && minutes <4*60){
+        document.write("Dobru noc <br>"+ "cas je "+ time+":" + min)
+    }
+    
+    </script>
+</body>
+</html>
