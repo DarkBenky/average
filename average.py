@@ -23,4 +23,4 @@ check()
 set("logo1","BMW1")
 
 
-uloha5(x,z)
+
